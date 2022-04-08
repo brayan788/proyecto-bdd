@@ -1,5 +1,5 @@
-aerodromo_origen,aerodromo_detino,compañia,codigo,fecha_salida,fecha_llegada,codigo_aeronave,id_ruta,velocidad,altitud,tipo_de_vuelo,numero_de_pasajeros,id_piloto,id_copiloto,estado
-SCEL,SCAR,LXP,123,04-04-2022,05-04-2022,AAAAAAA,pendiente,1,100,200,comercial,100,1,4
-SCAR,KMIA,LAN,234,06-04-2022,07-04-2022,AAAAAAA,aceptado,2,200,100,comercial,300,2,5
-KMIA,SCEL,SKY,345,04-05-2022,05-05-2022,AAAAAAA,rechazado,3,300,250,comercial,200,3,6
-KMIA,SCEL,CHI,666,04-05-2022,06-05-2022,BBBBBBB,aceptado,5,100,100,militar,100,7,8
+codigo,aerodromo_origen,aerodromo_detino,compañia,fecha_salida,fecha_llegada,codigo_aeronave,estado,id_ruta,velocidad,altitud,tipo_de_vuelo,numero_de_pasajeros,id_piloto,id_copiloto
+123,SCEL,SCAR,LXP,04-04-2022,05-04-2022,AAAAAAA,pendiente,1,100,200,comercial,100,1,4
+234,SCAR,KMIA,LAN,06-04-2022,07-04-2022,AAAAAAA,aceptado,2,200,100,comercial,300,2,5
+345,KMIA,SCEL,SKY,04-05-2022,05-05-2022,AAAAAAA,rechazado,3,300,250,comercial,200,3,6
+666,KMIA,SCEL,CHI,04-05-2022,06-05-2022,BBBBBBB,aceptado,5,100,100,militar,100,7,8
