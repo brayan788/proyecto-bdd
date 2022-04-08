@@ -1,0 +1,4 @@
+codigo,aerodromo_origen,aerodromo_detino,compañia,fecha_salida,fecha_llegada,codigo_aeronave,estado
+LXP123,SCEL,SCAR,LXP,04-04-2022,05-04-2022,AAAAAAA,pendiente
+LAN213,SCAR,KMIA,LAN,06-04-2022,07-04-2022,AAAAAAA,aceptado
+SKY456,KMIA,SCEL,SKY,04-05-2022,05-05-2022,AAAAAAA,rechazado
