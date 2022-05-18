@@ -7,10 +7,7 @@
 
   #Se obtiene el valor del input del usuario
   $fecha = $_POST["fecha"];
-  $fecha = date("Y/m/d", strtotime($fecha));;
-  $query = "SET DATASTYLE TO 'European';";
-  $result = $db -> prepare($query);
-	$result -> execute();
+  $fecha = date("Y/m/d", strtotime($fecha));
   #Se construye la consulta como un string
  	$query = "SELECT id, catergoria, pasaporte FROM documento_p WHERE inicio<$fecha and termino>$fecha;";
 
