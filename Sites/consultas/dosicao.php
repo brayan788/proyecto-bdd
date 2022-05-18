@@ -8,7 +8,7 @@
   $origen = $_POST["origen"];
   $destino = $_POST["destino"];
   $query = "SELECT * FROM vuelo, (SELECT id FROM aerodromo WHERE icao='$origen') AS t1, (SELECT id FROM aerodromo WHERE icao='$destino') AS t2, tiene_vuelo
-  WHERE vuelo.id =tiene_vuelo.idvuelo AND tiene_vuelo.salida=t1.id AND tiene_vuelo.llegada=t2.id;";
+  WHERE vuelo.id =tiene_vuelo.idvuelo AND tiene_vuelo.salida=t1.id AND tiene_vuelo.llegada=t2.id AND vuelo.estado='aceptado';";
   $result = $db -> prepare($query);
   $result -> execute();
   $dataCollected = $result -> fetchAll(); #Obtiene todos los resultados de la consulta en forma de un arreglo
