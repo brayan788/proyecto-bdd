@@ -9,7 +9,10 @@
   $fecha = $_POST["fecha"];
 
   #Se construye la consulta como un string
- 	$query = "SET DATESTYLE TO 'European'; SELECT id, categoria, pasaporte FROM documento_p WHERE inicio<$fecha and termino>$fecha;";
+  $query ="SET DATESTYLE TO 'European';";
+  $result = $db -> prepare($query);
+	$result -> execute();
+ 	$query = "SELECT id, categoria, pasaporte FROM documento_p WHERE inicio<$fecha and termino>$fecha;";
 
   #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
 	$result = $db -> prepare($query);
