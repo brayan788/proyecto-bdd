@@ -1,0 +1,40 @@
+aerodromo_id;nombre;codigo_ICAO;codigo_IATA;latitud;longitud;nombre_ciudad;nombre_pais;codigo_pista;codigo_puerto_embarque
+71;Aeropuerto Internacional de Nueva York;XSAM;WHO;898;1712;Nueva York;Estados Unidos;23R;844
+11;Aeropuerto Internacional John F. Kennedy;FOLH;CKR;181;1234;Nueva York;Estados Unidos;71R;902
+57;Aeropuerto de Milán-Malpensa;TCGF;SPT;701;563;Milan;Italia;88L;580
+55;Aeropuerto de Roma-Fiumicino;TBJM;SFF;1572;267;Roma;Italia;33R;933
+37;Aeropuerto Internacional Ben Gurión;NZTP;KZN;1593;1672;Tel Aviv;China;84R;458
+27;Aeropuerto Internacional de El Cairo;KZZS;HRV;1038;1076;El Cairo;Egipto;46L;968
+73;Aeropuerto Internacional de Copiapo;XSZW;WKT;922;1296;Santiago;Chile;55L;275
+75;Aeropuerto Big Apple;YHEP;YGY;430;1181;Nueva York;Estados Unidos;15L;972
+33;Aeropuerto Internacional de Pekín;NBMQ;JTM;1335;579;Beijing;China;99R;988
+45;Aeropuerto de Ámsterdam-Schiphol;RCQR;OHI;371;609;Amsterdam;Paises Bajos;11L;597
+65;Aeropuerto Internacional de Maiquetía Simón Bolívar;VBIT;UYL;1440;1657;Caracas;Venezuela;26L;204
+41;Aeropuerto Internacional de Icheon;PVOW;LMF;1591;719;Seul;Corea del Sur;26L;952
+15;Aeropuerto Internacional de San Francisco;GPRK;DUU;451;1428;San Francisco;Estados Unidos;19L;248
+69;Aeropuerto Internacional Ataturk;XOEY;VNN;1040;1544;Estambul;Turquia;68R;858
+25;Aeropuerto Internacional Kingsford Smith;KMPW;HOX;225;594;Sidney;Australia;92R;208
+67;Aeropuerto de Ibiza;XEWM;VBH;1568;548;Ibiza;España;37L;475
+61;Aeropuerto Internacional Eleftherios Venizelos;UQQX;TQV;724;1026;Atenas;Grecia;26L;693
+21;Aeropuerto Internacional Toronto Pearson;IWJC;HKA;402;418;Toronto;Canada;86R;197
+35;Aeropuerto Internacional Pudong;NZTG;KFE;1539;1157;Shangai;China;42R;500
+13;Aeropuerto Internacional de Miami;GAWW;CPH;961;84;Miami;Estados Unidos;83R;981
+63;Aeropuerto Internacional Indira Gandhi;URLQ;UAU;1499;1257;Nueva Delhi;India;77L;806
+3;Aeropuerto Internacional de Ezeiza;BVWK;BAH;147;512;Buenos Aires;Argentina;98L;285
+59;Aeropuerto de Hong Kong;TQQZ;TEF;1426;41;Hong Kong;Hong Kong;37L;578
+7;Aeropuerto Internacional de Galeão;EEGZ;BXS;68;903;Rio de Janeiro;Brasil;23R;708
+43;Aeropuerto Internacional de Carrasco;PYIM;NVI;664;1480;Montevideo;Uruguay;29R;462
+29;Aeropuerto de Adolfo Suárez Madrid-Barajas;MBOO;HSJ;542;1745;Madrid;España;52R;906
+17;Aeropuerto de la Ciudad de Londres;GSPA;EPM;1525;769;Londres;Inglaterra;54L;668
+49;Aeropuerto Internacional El Alto;SGWN;QJM;1735;56;La Paz;Bolivia;85L;272
+53;Aeropuerto Internacional Jorge Chávez;TAZY;RRK;622;1481;Lima;Peru;91L;787
+51;Aeropuerto Internacional de la Ciudad del Cabo;SIMJ;RFP;474;1571;Ciudad del Cabo;Sudafrica;73L;106
+19;Aeropuerto de París-Charles de Gaulle;HGZT;HCM;1472;496;Paris;Francia;99L;674
+31;Aeropuerto Josep Tarradellas Barcelona-El Prat;MVPW;JIZ;527;1652;Barcelona;España;84L;434
+23;Aeropuerto Internacional de Melbourne;JKRA;HNB;195;539;Melbourne;Australia;72L;345
+5;Aeropuerto Internacional de São Paulo-Guarulhos;DZFP;BKT;179;1778;Sao Pablo;Brasil;34L;967
+1;Aeropuerto Internacional Arturo Merino Benítez;BLFS;AWR;754;1065;Santiago;Chile;72R;755
+9;Aeropuerto Internacional O'Hare;FCJT;BYB;1665;510;Chicago;Estados Unidos;96R;487
+47;Aeropuerto Internacional de Cancún;SDSC;PKS;1033;994;Cancun;Mexico;64R;933
+39;Aeropuerto Internacional de Haneda;PFXE;LCX;1538;402;Tokio;Japon;72L;954
+77;Aeropuerto Internacional de Australia;ZGUA;ZLQ;273;1111;Sidney;Australia;43L;997
