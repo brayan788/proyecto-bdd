@@ -53,7 +53,15 @@
   <br>
   <br>
   <br>
+  <br>
 
+<h3 align="center"> ¿Quieres buscar los bloques de mayor trafico por aerodromo?</h3>
+
+<form align="center" action="consultas/trafico.php" method="post">
+  <br/>
+  <input type="submit" value="Buscar">
+</form>
+<br>
   <h3 align="center">¿Quieres buscar todos los pokemones por tipo?</h3>
 
   <?php
