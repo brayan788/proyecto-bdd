@@ -37,8 +37,8 @@
     <th>Cantidad de viajes</th>
 </tr>
   <?php
-	foreach ($vuelos2 as $vuelo) {
-  		echo "<tr> <td>$vuelo[0]</td> <td>$vuelo[1]</td> </tr>";
+	foreach ($vuelos2 as $vuelo2) {
+  		echo "<tr> <td>$vuelo2[0]</td> <td>$vuelo2[1]</td> </tr>";
 	}
   ?>
 	</table>
