@@ -56,11 +56,11 @@
   <br>
   <br>
 
-  <h3 align="center"> ¿Quieres conocer los Pokemones más altos que: ?</h3>
+  <h3 align="center"> ¿Quieres conocer los Pilotos disponible para tu viaje: ?</h3>
 
-  <form align="center" action="consultas/consulta_altura.php" method="post">
-    Altura Mínima:
-    <input type="text" name="altura">
+  <form align="center" action="consultas/pilotos.php" method="post">
+    FECHA DE VIAJE EN FORMATO dd/mm/yyyy:
+    <input type="date" name="fecha">
     <br/><br/>
     <input type="submit" value="Buscar">
   </form>
