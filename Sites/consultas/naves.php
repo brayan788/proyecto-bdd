@@ -7,7 +7,7 @@
     require("../config/conexion.php");
     $inicio = $_POST["fecha1"];
     $final = $_POST["fecha2"];
-    $query = "SELECT aeronave, COUNT(aeronave) FROM vuelo, tiene_vuelo WHERE vuelo.id =tiene_vuelo.idvuelo;";
+    $query = "SELECT aeronave, COUNT(aeronave) FROM vuelo, tiene_vuelo WHERE vuelo.id =tiene_vuelo.idvuelo AND vuelo.realizado='realizado' GROUP BY aeronave;";
     $result = $db -> prepare($query);
     $result -> execute();
     $vuelos = $result -> fetchAll();
