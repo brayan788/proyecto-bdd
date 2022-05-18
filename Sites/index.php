@@ -68,7 +68,7 @@
 
   <h3 align="center"> ¿Quieres las naves la cantidad de viaje entre dos fechas?: ?</h3>
 
-  <form align="center" action="consultas/pilotos.php" method="post">
+  <form align="center" action="consultas/naves.php" method="post">
     FECHA 1:
     <input type="date" name="fecha1">
     FECHA 2:
