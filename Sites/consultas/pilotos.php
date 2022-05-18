@@ -10,7 +10,7 @@
   $fecha = date_format($fecha, "Y/m/d");
 
   #Se construye la consulta como un string
- 	$query = "SELECT id, categoria, pasaporte FROM documento_p WHERE inicio<'2020/06/20' and termino>'2020/06/20';";
+ 	$query = "SELECT id, categoria, pasaporte FROM documento_p ;";
 
   #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
 	$result = $db -> prepare($query);
