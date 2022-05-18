@@ -7,10 +7,11 @@
 
   #Se obtiene el valor del input del usuario
   $fecha = $_POST["fecha"];
-  $DateTime = DateTime::createFromFormat('Y/m/d', $fecha);
-  $newDate = $DateTime->format('Y/m/d');
-  #Se construye la consulta como un string
- 	$query = "SELECT id, catergoria, pasaporte FROM documento_p WHERE inicio<'$newdate';";
+  $dia = substr(fecha,0,2);
+  $año = substr(fecha,6,4);
+  $fecha1 = str_replace($dia, $año, $fecha);
+  $fecha2 = str_replace($año, $dia, $fecha1);
+ 	$query = "SELECT id, catergoria, pasaporte FROM documento_p WHERE inicio<'$fecha2';";
 
   #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
 	$result = $db -> prepare($query);
