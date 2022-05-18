@@ -28,7 +28,7 @@
 	  <th>Realizado</th>
     </tr>
   <?php
-	foreach ($vuelos as $vuelo) {
+	foreach ($dataCollected as $vuelo) {
   		echo "<tr> <td>$vuelo[0]</td> <td>$vuelo[1]</td> <td>$vuelo[2]</td> <td>$vuelo[3]</td> <td>$vuelo[4]</td> <td>$vuelo[5]</td> <td>$vuelo[6]</td> <td>$vuelo[7]</td> <td>$vuelo[8]</td> <td>$vuelo[9]</td> <td>$vuelo[10]</td> </tr>";
 	}
   ?>
