@@ -7,12 +7,12 @@
 
   #Se obtiene el valor del input del usuario
   $fecha = $_POST["fecha"];
+//original date is in format YYYY-mm-dd
+  $DateTime = DateTime::createFromFormat('Y/m/d', $fecha);
+  $newDate = $DateTime->format('Y/m/d');
+  echo "The new date is $newDate.";
   #Se construye la consulta como un string
-  $query = "SET DATESTYLE TO 'European'"
-  $result = $db -> prepare($query);
-	$result -> execute();
-  $pilotos = $result -> fetchAll();
- 	$query = "SELECT id, catergoria, pasaporte FROM documento_p WHERE inicio<'$fecha';";
+ 	$query = "SELECT id, catergoria, pasaporte FROM documento_p WHERE inicio<'$newdate';";
 
   #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
 	$result = $db -> prepare($query);
