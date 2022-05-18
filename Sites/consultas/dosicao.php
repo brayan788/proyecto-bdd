@@ -7,7 +7,7 @@
 
   $origen = $_POST["origen"];
   $destino = $_POST["destino"];
-  $query = "SELECT * FROM vuelo, (SELECT id FROM aerodromo WHERE icao LIKE '$origen') AS t1, (SELECT id FROM aerodromo WHERE icao LIKE '$destino') AS t2, tiene_vuelo
+  $query = "SELECT * FROM vuelo, (SELECT id FROM aerodromo WHERE icao LIKE UPPER('$origen')) AS t1, (SELECT id FROM aerodromo WHERE icao LIKE UPPER('$destino')) AS t2, tiene_vuelo
   WHERE vuelo.id =tiene_vuelo.idvuelo AND tiene_vuelo.salida=t1.id AND tiene_vuelo.llegada=t2.id AND vuelo.estado='aceptado';";
   $result = $db -> prepare($query);
   $result -> execute();
