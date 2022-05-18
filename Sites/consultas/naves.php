@@ -8,7 +8,7 @@
     $inicio = $_POST["fecha1"];
     $final = $_POST["fecha2"];
     $query = "SELECT aeronave, COUNT(aeronave) FROM vuelo, tiene_vuelo WHERE vuelo.id =tiene_vuelo.idvuelo AND
-    vuelo.realizado='realizado' AND vuelo.fecha_salida>='$inicio' AND vuelo.fecha_llegad<='$final' GROUP BY aeronave;";
+    vuelo.realizado='realizado' AND vuelo.fecha_salida>='$inicio' AND vuelo.fecha_llegada<='$final' GROUP BY aeronave;";
     $result = $db -> prepare($query);
     $result -> execute();
     $vuelos = $result -> fetchAll();
