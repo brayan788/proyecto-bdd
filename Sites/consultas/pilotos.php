@@ -9,6 +9,7 @@
   $fecha = $_POST["fecha"];
 
   #Se construye la consulta como un string
+  $query ="SET DATESTYLE TO 'European';";
  	$query = "SELECT id, categoria, pasaporte FROM documento_p WHERE inicio<=$fecha and termino>$fecha;";
 
   #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
@@ -25,7 +26,6 @@
     </tr>
   
       <?php
-        // echo $pokemones;
         foreach ($pilotos as $p) {
           echo "<tr><td>$p[0]</td><td>$p[1]</td><td>$p[2]</td></tr>";
       }
