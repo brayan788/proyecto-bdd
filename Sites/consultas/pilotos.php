@@ -7,7 +7,7 @@
 
   #Se obtiene el valor del input del usuario
   $fecha = $_POST["fecha"];
-  $query = "SET DATASTYLE 'European';";
+  $query = "SET DATASTYLE TO 'European';";
   $result = $db -> prepare($query);
 	$result -> execute();
   #Se construye la consulta como un string
