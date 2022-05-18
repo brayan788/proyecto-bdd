@@ -59,7 +59,7 @@
   <h3 align="center"> ¿Quieres conocer los Pilotos disponible para tu viaje: ?</h3>
 
   <form align="center" action="consultas/pilotos.php" method="post">
-    FECHA DE VIAJE EN FORMATO dd/mm/yyyy:
+    FECHA DE VIAJE EN FORMATO yyyy/mm/dd:
     <input type="text" name="fecha">
     <br/><br/>
     <input type="submit" value="Buscar">
