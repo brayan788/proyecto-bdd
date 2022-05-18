@@ -60,7 +60,7 @@
 
   <form align="center" action="consultas/pilotos.php" method="post">
     FECHA DE VIAJE EN FORMATO dd/mm/yyyy:
-    <input type="date" name="fecha">
+    <input type="text" name="fecha">
     <br/><br/>
     <input type="submit" value="Buscar">
   </form>
