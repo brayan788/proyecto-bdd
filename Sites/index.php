@@ -60,8 +60,28 @@
 <form align="center" action="consultas/trafico.php" method="post">
   <br/>
   <input type="submit" value="Buscar">
+
 </form>
 <br>
+  <br>
+  <br>
+
+  <h3 align="center"> ¿Quieres las naves la cantidad de viaje entre dos fechas?: ?</h3>
+
+  <form align="center" action="consultas/pilotos.php" method="post">
+    FECHA 1:
+    <input type="date" name="fecha1">
+    FECHA 2:
+    <input type="date" name="fecha2">
+    <br/><br/>
+    <input type="submit" value="Buscar">
+  </form>
+  <br>
+  <br>
+  <br>
+  <br>
+<br>
+
   <h3 align="center">¿Quieres buscar todos los pokemones por tipo?</h3>
 
   <?php
