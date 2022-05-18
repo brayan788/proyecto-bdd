@@ -7,7 +7,6 @@
 
   #Se obtiene el valor del input del usuario
   $fecha = $_POST["fecha"];
-  pg_exec("ALTER USER 'grupo82' SET datestyle TO 'European'")
  	$query = "SELECT id, catergoria, pasaporte FROM documento_p WHERE inicio<='$fecha' and termino>'$fecha';";
 
   #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
