@@ -12,8 +12,13 @@
     $result = $db -> prepare($query);
     $result -> execute();
     $vuelos = $result -> fetchAll();
+    $query2 = "SELECT aeronave, COUNT(aeronave) FROM fpl, tiene_fpl, (SELECT fplid FROM asociado) AS t1  WHERE fpl.id =tiene_fpl.fplid AND
+    fpl.realizado='realizado' AND fpl.fecha_salida>='$inicio' AND fpl.fecha_llegada<='$final' AND fpl.id NOT IN t1 GROUP BY aeronave;";
+    $result2 = $db2 -> prepare($query2);
+    $result2 -> execute();
+    $vuelos2 = $result2 -> fetchAll();
     ?>
-
+<h3 align="center"> VUELOS</h3>
 <table>
 <tr>
     <th>Codigo</th>
@@ -21,6 +26,18 @@
 </tr>
   <?php
 	foreach ($vuelos as $vuelo) {
+  		echo "<tr> <td>$vuelo[0]</td> <td>$vuelo[1]</td> </tr>";
+	}
+  ?>
+	</table>
+<h3 align="center"> FPL</h3>
+<table>
+<tr>
+    <th>Codigo</th>
+    <th>Cantidad de viajes</th>
+</tr>
+  <?php
+	foreach ($vuelos2 as $vuelo) {
   		echo "<tr> <td>$vuelo[0]</td> <td>$vuelo[1]</td> </tr>";
 	}
   ?>
