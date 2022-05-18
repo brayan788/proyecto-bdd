@@ -26,23 +26,9 @@
 
   <form align="center" action="consultas/dosicao.php" method="post">
     Seleccionar ICAO salida:
-    <select name="origen">
-      <?php
-      #Para cada tipo agregamos el tag <option value=value_of_param> visible_value </option>
-      foreach ($dataCollected as $d) {
-        echo "<option value=$d[0]>$d[0]</option>";
-      }
-      ?>
-    </select>
+    <input type="text" name="origen">
     Seleccionar ICAO llegada:
-    <select name="destino">
-      <?php
-      #Para cada tipo agregamos el tag <option value=value_of_param> visible_value </option>
-      foreach ($dataCollected as $d) {
-        echo "<option value=$d[0]>$d[0]</option>";
-      }
-      ?>
-    </select>
+    <input type="text" name="destino">
     <br><br>
     <input type="submit" value="Buscar vuelos">
   </form>
