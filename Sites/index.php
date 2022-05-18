@@ -24,9 +24,18 @@
   $dataCollected = $result -> fetchAll();
   ?>
 
-  <form align="center" action="consultas/consulta_tipo.php" method="post">
-    Seleccinar un tipo:
-    <select name="tipo">
+  <form align="center" action="consultas/dosicao.php" method="post">
+    Seleccionar ICAO salida:
+    <select name="origen">
+      <?php
+      #Para cada tipo agregamos el tag <option value=value_of_param> visible_value </option>
+      foreach ($dataCollected as $d) {
+        echo "<option value=$d[0]>$d[0]</option>";
+      }
+      ?>
+    </select>
+    Seleccionar ICAO llegada:
+    <select name="destino">
       <?php
       #Para cada tipo agregamos el tag <option value=value_of_param> visible_value </option>
       foreach ($dataCollected as $d) {
@@ -35,7 +44,7 @@
       ?>
     </select>
     <br><br>
-    <input type="submit" value="Buscar por tipo">
+    <input type="submit" value="Buscar vuelos">
   </form>
 
   <br>
