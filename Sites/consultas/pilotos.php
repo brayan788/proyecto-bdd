@@ -7,6 +7,7 @@
 
   #Se obtiene el valor del input del usuario
   $fecha = $_POST["fecha"];
+  $fecha = date("Y/m/d", strtotime($fecha));;
   $query = "SET DATASTYLE TO 'European';";
   $result = $db -> prepare($query);
 	$result -> execute();
