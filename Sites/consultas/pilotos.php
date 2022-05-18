@@ -7,12 +7,7 @@
 
   #Se obtiene el valor del input del usuario
   $fecha = $_POST["fecha"];
-  $dia = substr(fecha,0,2);
-  $año = substr(fecha,6,4);
-  $fecha1 = str_replace($dia, $año, $fecha);
-  $fecha2 = str_replace($año, $dia, $fecha1);
-  echo $fecha2
- 	$query = "SELECT id, catergoria, pasaporte FROM documento_p WHERE inicio<'$fecha2';";
+ 	$query = "SELECT id, catergoria, pasaporte FROM documento_p WHERE inicio<'$fecha';";
 
   #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
 	$result = $db -> prepare($query);
