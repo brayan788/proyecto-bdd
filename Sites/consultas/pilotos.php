@@ -7,10 +7,10 @@
 
   #Se obtiene el valor del input del usuario
   $fecha = $_POST["fecha"];
-  $fecha = date_format($fecha, "Y/m/d");
+  $fecha = date_format($fecha, "y/m/d");
 
   #Se construye la consulta como un string
- 	$query = "SELECT id, categoria, pasaporte FROM documento_p ;";
+ 	$query = "SELECT id, catergoria, pasaporte FROM documento_p WHERE inicio<$fecha and termino>$fecha;";
 
   #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
 	$result = $db -> prepare($query);
