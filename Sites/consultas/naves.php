@@ -12,9 +12,9 @@
     $result = $db -> prepare($query);
     $result -> execute();
     $vuelos = $result -> fetchAll();
-    $query2 = "SELECT aeronave, COUNT(aeronave) FROM fpl, tiene_fpl, (SELECT fplid FROM asociado) AS t1  WHERE fpl.id =tiene_fpl.fplid AND
+    $query2 = "SELECT aeronave, COUNT(aeronave) FROM fpl, tiene_fpl, (SELECT fplid FROM asociado) AS t1  WHERE fpl.id = tiene_fpl.fplid AND
     fpl.realizado='realizado' AND fpl.fecha_salida>='$inicio' AND fpl.fecha_llegada<='$final' AND fpl.id IN (t1.flpid) GROUP BY aeronave;";
-    $result2 = $db -> prepare($query2);
+    $result2 = $db2 -> prepare($query2);
     $result2 -> execute();
     $vuelos2 = $result2 -> fetchAll();
     ?>
