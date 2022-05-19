@@ -84,8 +84,6 @@
 
   <h3 align="center">¿Quieres ver los pares que nunca han viajado juntos?</h3>
 
-  <
-
   <form align="center" action="consultas/pares.php" method="post">
     </select>
     <br><br>
