@@ -25,7 +25,7 @@
           </svg>
           <input type="password" class="login__input pass" placeholder="Contraseña"/>
         </div>
-        <button type="button" class="login__submit">Sign in</button>
+        <button type="button" class="login__submit">Logearse</button>
         <p class="login__signup">Aún no existen los usuarios? &nbsp;<a>Importar Usuarios</a></p>
       </div>
     </div>
