@@ -2,7 +2,7 @@
 
 session_start(); 
 
-include "db_conn.php";
+require("../config/conexion_91.php");
 
 if (isset($_POST['user']) && isset($_POST['password'])) {
 
