@@ -68,7 +68,7 @@ if (isset($_POST['user']) && isset($_POST['password'])) {
 
         }else{
 
-            header("Location: index.php?error=Incorect User name or password");
+            header("Location: index.php?error=Couldn't connect to database");
 
             exit();
 
