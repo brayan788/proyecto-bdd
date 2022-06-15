@@ -8,7 +8,12 @@
     $unmae= "$user";
     $password = "$password";
     $db_name = "$databaseName";
-    $conn = mysqli_connect($sname, $unmae, $password, $db_name);
+    $conn = mysqli_connect($sname, $unmae, $password, $db_name, 5432);
+    if (!$conn) {
+
+      echo "Connection failed!";
+  
+  }
   } catch (Exception $e) {
     echo "No se pudo conectar a la base de datos: $e";
   }
