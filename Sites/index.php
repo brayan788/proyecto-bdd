@@ -31,6 +31,9 @@
           </div>
           <button type="submit" class="login__submit">Logearse</button>
           <p class="login__signup">Aún no existen los usuarios? &nbsp;<a>Importar Usuarios</a></p>
+          <?php if (isset($_GET['error'])) { ?>
+          <p class="error"><?php echo $_GET['error']; ?></p>
+          <?php } ?>
         </form>
       </div>
   <!-- partial -->
