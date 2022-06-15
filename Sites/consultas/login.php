@@ -38,11 +38,13 @@ if (isset($_POST['user']) && isset($_POST['password'])) {
 
         $sql = "SELECT * FROM usuarios WHERE username='$uname' AND password='$pass'";
 
-        $result = mysqli_query($conn, $sql);
+        $result = $db->prepare($sql);
+        $result->execute();
 
-        if (mysqli_num_rows($result) === 1) {
+        $count = $result->rowCount();
+        if ($count === 1) {
 
-            $row = mysqli_fetch_assoc($result);
+            $row = $result->fetch(PDO::FETCH_ASSOC);
 
             if ($row['username'] === $uname && $row['password'] === $pass) {
 
