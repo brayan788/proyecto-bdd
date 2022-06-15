@@ -24,13 +24,13 @@ if (isset($_POST['user']) && isset($_POST['password'])) {
 
     if (empty($uname)) {
 
-        header("Location: index.php?error=User Name is required");
+        header("Location: ../index.php?error=User Name is required");
 
         exit();
 
     }else if(empty($pass)){
 
-        header("Location: index.php?error=Password is required");
+        header("Location: ../index.php?error=Password is required");
 
         exit();
 
@@ -54,13 +54,13 @@ if (isset($_POST['user']) && isset($_POST['password'])) {
 
                 $_SESSION['id'] = $row['id'];
 
-                header("Location: index_old.php");
+                header("Location: ../index_old.php");
 
                 exit();
 
             }else{
 
-                header("Location: index.php?error=Incorect User name or password");
+                header("Location: ../index.php?error=Incorect User name or password");
 
                 exit();
 
@@ -68,7 +68,7 @@ if (isset($_POST['user']) && isset($_POST['password'])) {
 
         }else{
 
-            header("Location: index.php?error=Couldn't connect to database");
+            header("Location: ../index.php?error=Couldn't connect to database");
 
             exit();
 
@@ -78,7 +78,7 @@ if (isset($_POST['user']) && isset($_POST['password'])) {
 
 }else{
 
-    header("Location: index.php");
+    header("Location: ../index.php");
 
     exit();
 
