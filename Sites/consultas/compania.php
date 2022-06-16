@@ -3,7 +3,7 @@
 <?php 
 	if ($_SESSION['type'] !== "aerolinea") {
 		die('Acceso Denegado');
-		?>
+  }?>
 
 <body>
 <?php

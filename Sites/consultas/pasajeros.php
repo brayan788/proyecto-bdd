@@ -3,7 +3,7 @@
 <?php 
 	if ($_SESSION['type'] !== "pasajero") {
 		die('Acceso Denegado');
-		?>
+	}?>
 
 <body>
 
