@@ -1,5 +1,10 @@
 <?php include('../templates/header.html');   ?>
 
+<?php 
+	if ($_SESSION['type'] !== "aerolinea") {
+		die('Acceso Denegado');
+		?>
+
 <body>
 <?php
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
