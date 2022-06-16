@@ -3,6 +3,7 @@
 <body>
 
 <?php 
+	session_start();
 	if ($_SESSION['type'] !== "admin") {
 		die('Acceso Denegado');
 	}?>

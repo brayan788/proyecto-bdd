@@ -1,6 +1,7 @@
 <?php include('../templates/header.html');   ?>
 
-<?php 
+<?php
+  session_start();
 	if ($_SESSION['type'] !== "aerolinea") {
 		die('Acceso Denegado');
   }?>
