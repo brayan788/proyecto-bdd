@@ -4,7 +4,7 @@
 
 <?php
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
-  require("../config/conexion.php");
+  require("../config/conexion_82.php");
 
  	$query = "SELECT * FROM vuelo WHERE estado LIKE 'pendiente';";
 	$result = $db -> prepare($query);
