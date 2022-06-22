@@ -1,4 +1,4 @@
-<?php include('../templates/header.html');   ?>
+?php include('../templates/header.html');   ?>
 
 <body>
 
@@ -12,10 +12,12 @@
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
   require("../config/conexion_82.php");
 
- 	$query = "SELECT * FROM fpl WHERE estado LIKE 'pendiente';";
-	$result = $db -> prepare($query);
-	$result -> execute();
-	$vuelos = $result -> fetchAll();
+  $inicio = $_POST["fecha1"];
+  $final = $_POST["fecha2"];
+  $query = "SELECT * FROM fpl WHERE estado LIKE 'pendiente' AND fecha_salida>='$inicio' AND fecha_llegada<='$final';";
+  $result = $db -> prepare($query);
+  $result -> execute();
+  $vuelos = $result -> fetchAll();
   ?>
 
 	<table>
@@ -37,22 +39,5 @@
 	}
   ?>
 	</table>
-  <br>
-  <br>
-  <br>
-
-  <h3 align="center"> ¿Quieres ver los viajes entre dos fechas?: ?</h3>
-
-  <form align="center" action="fechas.php" method="post">
-    FECHA 1:
-    <input type="date" name="fecha1">
-    FECHA 2:
-    <input type="date" name="fecha2">
-    <br/><br/>
-    <input type="submit" value="Buscar">
-  </form>
-  <br>
-  <br>
-  <br>
-
+  
 <?php include('../templates/footer.html'); ?>
