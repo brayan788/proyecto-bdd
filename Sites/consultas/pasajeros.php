@@ -1,5 +1,11 @@
 <?php include('../templates/header.html');   ?>
 
+<?php
+	session_start();
+	if ($_SESSION['type'] !== "pasajero") {
+		die('Acceso Denegado');
+	}?>
+
 <body>
 
 <?php

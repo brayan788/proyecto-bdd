@@ -56,7 +56,19 @@ if (isset($_POST['user']) && isset($_POST['password'])) {
 
                 $_SESSION['id'] = $row['id'];
 
-                header("Location: ../index_old.php");
+                if ($_SESSION['type'] === "admin") {
+
+                    header("Location: admin.php");
+                
+                }elseif ($_SESSION['type'] === "aerolinea") {
+
+                    header("Location: compania.php");
+                
+                }elseif ($_SESSION['type'] === "pasajero") {
+
+                    header("Location: pasajeros.php");
+                
+                }
 
                 exit();
 
