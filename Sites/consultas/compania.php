@@ -19,8 +19,8 @@
 	$result = $db -> prepare($query);
 	$result -> execute();
 	$vuelos = $result -> fetchAll();
+  echo "VUELOS APROBADOS PARA COMPAÑIA $com"
   ?>
-
   <table>
     <tr>
       <th>ID</th>
@@ -40,8 +40,5 @@
 	}
   ?>
 	</table>
-      ?>
-      
-  </table>
 
 <?php include('../templates/footer.html'); ?>
