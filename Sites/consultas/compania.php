@@ -3,7 +3,6 @@
 <?php
   session_start();
 	if ($_SESSION['type'] !== "aerolinea") {
-    $com = $_ SESSION['username'];
 		die('Acceso Denegado');
   }?>
 
@@ -13,6 +12,7 @@
   require("../config/conexion_82.php");
 
   #Se obtiene el valor del input del usuario
+  $com = $_SESSION['username'];
  	$query = "SELECT * FROM vuelo WHERE codigo LIKE '$com%' AND estado='aprobado';";
 
   #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
