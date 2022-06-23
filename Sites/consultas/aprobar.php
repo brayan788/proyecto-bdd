@@ -15,5 +15,4 @@
  	$query = "UPDATE fpl SET estado = 'aprobado' WHERE id='$id';";
 	$result = $db -> prepare($query);
 	$result -> execute();
-    header('Location:' . getenv('HTTP_REFERER'));
   ?>
