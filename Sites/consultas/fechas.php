@@ -32,12 +32,10 @@
 	  <th>Tipo_vuelo</th>
 	  <th>Max_pasajero</th>
 	  <th>Realizado</th>
-      <th>Aprobar</th>
-	  <th>Rechazar</th>
     </tr>
   <?php
 	foreach ($vuelos as $vuelo) {
-  		echo "<tr> <td>$vuelo[0]</td> <td>$vuelo[1]</td> <td>$vuelo[2]</td> <td>$vuelo[3]</td> <td>$vuelo[4]</td> <td>$vuelo[5]</td> <td>$vuelo[6]</td> <td>$vuelo[7]</td> <td>$vuelo[8]</td> <td>$vuelo[9]</td> <td><a href='aprobar.php?id=" . $vuelo[0] ."'>Aprobar</a></td> <td><a href='rechazar.php?id=" . $vuelo[0] ."'>Rechazar</a></td> </tr>";
+  		echo "<tr> <td>$vuelo[0]</td> <td>$vuelo[1]</td> <td>$vuelo[2]</td> <td>$vuelo[3]</td> <td>$vuelo[4]</td> <td>$vuelo[5]</td> <td>$vuelo[6]</td> <td>$vuelo[7]</td> <td>$vuelo[8]</td> <td>$vuelo[9]</td> </tr>";
 	}
   ?>
 	</table>
