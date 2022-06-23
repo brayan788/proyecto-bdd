@@ -2,8 +2,8 @@
 
 <?php
   session_start();
-  $com = $_ SESSION['username'];
 	if ($_SESSION['type'] !== "aerolinea") {
+    $com = $_ SESSION['username'];
 		die('Acceso Denegado');
   }?>
 
