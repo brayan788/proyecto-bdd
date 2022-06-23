@@ -32,6 +32,8 @@
 	  <th>Tipo_vuelo</th>
 	  <th>Max_pasajero</th>
 	  <th>Realizado</th>
+      <th>Aprobar</th>
+	  <th>Rechazar</th>
     </tr>
   <?php
 	foreach ($vuelos as $vuelo) {
