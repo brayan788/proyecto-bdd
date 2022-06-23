@@ -13,7 +13,7 @@
 
   #Se obtiene el valor del input del usuario
   $com = $_SESSION['username'];
- 	$query = "SELECT * FROM vuelo WHERE codigo LIKE '$com%' AND estado='aprobado';";
+ 	$query = "SELECT * FROM vuelo WHERE codigo LIKE '$com%' AND estado='aceptado';";
 
   #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
 	$result = $db -> prepare($query);
