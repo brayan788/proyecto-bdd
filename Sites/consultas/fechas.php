@@ -40,4 +40,11 @@
   ?>
 	</table>
   
-<?php include('../templates/footer.html'); ?>
+    <br>
+<br>
+<form action="../admin.php" method="get">
+    <input type="submit" value="Volver">
+</form>
+</body>
+
+</html>
