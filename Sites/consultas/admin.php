@@ -10,9 +10,9 @@
 
 <?php
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
-  require("../config/conexion.php");
+  require("../config/conexion_82.php");
 
- 	$query = "SELECT * FROM vuelo WHERE estado LIKE 'pendiente';";
+ 	$query = "SELECT * FROM fpl WHERE estado LIKE 'pendiente';";
 	$result = $db -> prepare($query);
 	$result -> execute();
 	$vuelos = $result -> fetchAll();
@@ -25,18 +25,36 @@
       <th>Codigo</th>
 	  <th>Fecha_salida</th>
 	  <th>Fecha_llegada</th>
-	  <th>Fecha_propuesta</th>
 	  <th>Velocidad</th>
 	  <th>Altitud</th>
 	  <th>Tipo_vuelo</th>
 	  <th>Max_pasajero</th>
 	  <th>Realizado</th>
+	  <th>Aprobar</th>
+	  <th>Rechazar</th>
     </tr>
   <?php
 	foreach ($vuelos as $vuelo) {
-  		echo "<tr> <td>$vuelo[0]</td> <td>$vuelo[1]</td> <td>$vuelo[2]</td> <td>$vuelo[3]</td> <td>$vuelo[4]</td> <td>$vuelo[5]</td> <td>$vuelo[6]</td> <td>$vuelo[7]</td> <td>$vuelo[8]</td> <td>$vuelo[9]</td> <td>$vuelo[10]</td> </tr>";
+  		echo "<tr> <td>$vuelo[0]</td> <td>$vuelo[1]</td> <td>$vuelo[2]</td> <td>$vuelo[3]</td> <td>$vuelo[4]</td> <td>$vuelo[5]</td> <td>$vuelo[6]</td> <td>$vuelo[7]</td> <td>$vuelo[8]</td> <td>$vuelo[9]</td> <td>'<a href="destino.php?saludo=$vuelo[0]" aprobar</a>'</td> </tr>";
 	}
   ?>
 	</table>
+  <br>
+  <br>
+  <br>
+
+  <h3 align="center"> ¿Quieres ver los viajes entre dos fechas?: ?</h3>
+
+  <form align="center" action="fechas.php" method="post">
+    FECHA 1:
+    <input type="date" name="fecha1">
+    FECHA 2:
+    <input type="date" name="fecha2">
+    <br/><br/>
+    <input type="submit" value="Buscar">
+  </form>
+  <br>
+  <br>
+  <br>
 
 <?php include('../templates/footer.html'); ?>

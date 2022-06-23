@@ -1,7 +1,7 @@
 <?php
   try {
     #Pide las variables para conectarse a la base de datos.
-    require('data.php'); 
+    require('data_82.php'); 
     # Se crea la instancia de PDO
     $db = new PDO("pgsql:dbname=$databaseName;host=localhost;port=5432;user=$user;password=$password");
   } catch (Exception $e) {
