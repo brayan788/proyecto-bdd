@@ -11,7 +11,7 @@
 <?php
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
   require("../config/conexion_82.php");
-  $id = $_POST["id"];
+  $id = $_GET["id"];
  	$query = "UPDATE fpl SET estado = 'aprobado' WHERE id='$id';";
 	$result = $db -> prepare($query);
 	$result -> execute();
