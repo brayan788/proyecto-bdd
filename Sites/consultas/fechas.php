@@ -42,7 +42,7 @@
   
     <br>
 <br>
-<form action="../admin.php" method="get">
+<form action="../consultas/admin.php" method="get">
     <input type="submit" value="Volver">
 </form>
 </body>
