@@ -49,4 +49,14 @@
   ?>
 	</table>
 
+	<form align="center" action="<?php echo $PHP_SELF; ?>" method="post">
+	Ciudad de origen:
+	<select name="tipo">
+		<?php
+		#Para cada tipo agregamos el tag <option value=value_of_param> visible_value </option>
+		foreach ($dataCollected as $d) {
+		echo "<option value=$d[0]>$d[0]</option>";
+		}
+?>
+
 <?php include('../templates/footer.html'); ?>
