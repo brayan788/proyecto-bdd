@@ -10,31 +10,41 @@
 
 <?php
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
-  require("../config/conexion.php");
+  require("../config/conexion_82.php");
 
- 	$query = "SELECT * FROM vuelo WHERE realizado= 'realizado';";
+	$pas = $_SESSION['username'];
+	$num = "SELECT pasaporte_pasajero FROM reservas WHERE nombre_pasajero LIKE '$pas%';";
+	$query = "SELECT vuelo_id FROM reservas WHERE nombre_pasajero LIKE '$pas%';";
 	$result = $db -> prepare($query);
 	$result -> execute();
-	$vuelos = $result -> fetchAll();
+	$reservas = $result -> fetchAll();
+
+	$result1 = $db -> prepare($num);
+	$result1 -> execute();
+	$numeros = $result1 -> fetchAll();
+	echo "Pasajero: $pas, numero de pasaporte: $numeros[0]"
+
+	$result2 = $db -> prepare("SELECT nombre_ciudad FROM aerodromos, reservas WHERE aerodromos = vuelos.aerodromo_salida_id AND vuelos.estado='aceptado';");
+	$result2 -> execute();
+	$dataCollected = $result2 -> fetchAll();
   ?>
 
 	<table>
     <tr>
-      <th>ID</th>
-      <th>Estado</th>
-      <th>Codigo</th>
-	  <th>Fecha_salida</th>
-	  <th>Fecha_llegada</th>
-	  <th>Fecha_propuesta</th>
-	  <th>Velocidad</th>
-	  <th>Altitud</th>
-	  <th>Tipo_vuelo</th>
-	  <th>Max_pasajero</th>
-	  <th>Realizado</th>
+	<th>Reserva id</th>
+      <th>Codigo reserva</th>
+      <th>Número ticket</th>
+	  <th>Vuelo id</th>
+	  <th>Pasaporte comprador</th>
+	  <th>Nombre comprador</th>
+	  <th>Nacionalidad comprador</th>
+	  <th>Numero de asiento</th>
+	  <th>Clase</th>
+	  <th>Comida y maleta</th>
     </tr>
   <?php
-	foreach ($vuelos as $vuelo) {
-  		echo "<tr> <td>$vuelo[0]</td> <td>$vuelo[1]</td> <td>$vuelo[2]</td> <td>$vuelo[3]</td> <td>$vuelo[4]</td> <td>$vuelo[5]</td> <td>$vuelo[6]</td> <td>$vuelo[7]</td> <td>$vuelo[8]</td> <td>$vuelo[9]</td> <td>$vuelo[10]</td> </tr>";
+	foreach ($reservas as $reserva) {
+		echo "<tr> <td>$reserva[0]</td> <td>$reserva[1]</td> <td>$reserva[2]</td> <td>$reserva[3]</td> <td>$reserva[4]</td> <td>$reserva[5]</td> <td>$reserva[6]</td> <td>$reserva[7]</td> <td>$reserva[8]</td> <td>$reserva[9]</td> </tr>";
 	}
   ?>
 	</table>
