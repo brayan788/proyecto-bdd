@@ -34,7 +34,7 @@
 	$result3 -> execute();
 	$dataCollected1 = $result3 -> fetchAll();
 
-	$fechas = "SELECT fecha_salidas FROM vuelos WHERE estado LIKE 'aceptado';";
+	$fechas = "SELECT fecha_salida FROM vuelos WHERE estado LIKE 'aceptado';";
 	$result4 = $db -> prepare($fechas);
 	$result4 -> execute();
 	$dataCollected2 = $result4 -> fetchAll();
