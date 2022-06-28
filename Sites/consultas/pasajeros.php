@@ -10,7 +10,7 @@
 
 <?php
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
-  require("../config/conexion_91.php");
+  require("../config/conexion_82.php");
 
 	$pas = $_SESSION['username'];
 	$num = "SELECT pasaporte_pasajero FROM reservas WHERE nombre_pasajero LIKE '$pas%';";
@@ -24,7 +24,8 @@
 	$numeros = $result1 -> fetchAll();
 	echo "Pasajero: $pas, numero de pasaporte: $numeros[0]"
 
-	$result2 = $db -> prepare("SELECT nombre_ciudad FROM aerodromos, reservas WHERE aerodromos = vuelos.aerodromo_salida_id AND vuelos.estado='aceptado';");
+	$ciudades = "SELECT nombre_ciudad FROM aerodromos, reservas WHERE aerodromos = vuelos.aerodromo_salida_id AND vuelos.estado='aceptado';";
+	$result2 = $db -> prepare($ciudades)
 	$result2 -> execute();
 	$dataCollected = $result2 -> fetchAll();
   ?>
