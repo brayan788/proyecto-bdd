@@ -56,3 +56,9 @@
 	</table>
 
 <?php include('../templates/footer.html'); ?>
+
+<form action="../consultas/pasajeros.php" method="get">
+    <input type="submit" value="Volver">
+</form>
+</body>
+</html>
