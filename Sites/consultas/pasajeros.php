@@ -81,8 +81,8 @@
 		foreach ($dataCollected1 as $d1) {
 		echo "<option value=$d1[0]>$d1[0]</option>";
 		}
-	Fecha de despegue:
 ?>
+	Fecha de despegue:
 		<select name="tipo3">
 		<?php
 		#Para cada tipo agregamos el tag <option value=value_of_param> visible_value </option>
