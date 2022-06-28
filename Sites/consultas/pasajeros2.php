@@ -28,6 +28,7 @@
   $result = $db -> prepare($query);
   $result -> execute();
   $reservas = $result -> fetchAll();
+  echo $reservas
   ?>
 
 <table>
