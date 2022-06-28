@@ -37,7 +37,7 @@
 	$fechas = "SELECT fecha_salidas FROM vuelos WHERE estado LIKE 'aceptado';";
 	$result4 = $db -> prepare($ciudades);
 	$result4 -> execute();
-	$dataCollected3 = $result4 -> fetchAll();
+	$dataCollected2 = $result4 -> fetchAll();
   ?>
 
 	<table>
@@ -75,7 +75,7 @@
 		}
 ?>
 	Ciudad de destino:
-	<select name="tipo">
+	<select name="tipo2">
 		<?php
 		#Para cada tipo agregamos el tag <option value=value_of_param> visible_value </option>
 		foreach ($dataCollected1 as $d1) {
@@ -83,7 +83,7 @@
 		}
 	Fecha de despegue:
 ?>
-		<select name="tipo">
+		<select name="tipo3">
 		<?php
 		#Para cada tipo agregamos el tag <option value=value_of_param> visible_value </option>
 		foreach ($dataCollected2 as $d2) {
