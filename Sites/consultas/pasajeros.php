@@ -83,6 +83,14 @@
 		echo "<option value=$d2[0]>$d2[0]</option>";
 		}
 ?>
+	Ciudad de destino:
+	<select name="tipo2">
+		<?php
+		#Para cada tipo agregamos el tag <option value=value_of_param> visible_value </option>
+		foreach ($dataCollected1 as $d1) {
+		echo "<option value=$d1[0]>$d1[0]</option>";
+		}
+?>
 	<input type="submit" value="Buscar por tipo">
 	</form>
 
