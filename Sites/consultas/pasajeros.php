@@ -65,7 +65,7 @@
   ?>
 	</table>
 
-	<form align="center" action="consultas/pasajeros2.php" method="post">
+	<form align="center" action="pasajeros2.php" method="post">
 	Ciudad de origen:
 	<select name="origen">
 		<?php
