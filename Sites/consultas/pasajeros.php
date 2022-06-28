@@ -23,8 +23,9 @@
 	$result1 -> execute();
 	$numeros = $result1 -> fetchAll();
 	echo "Pasajero: $pas, numero de pasaporte: $numeros[0]"
-
-	$result2 = $db -> prepare("SELECT nombre_ciudad FROM aerodromos, reservas WHERE aerodromos = vuelos.aerodromo_salida_id AND vuelos.estado='aceptado';");
+	
+	$query2 = "SELECT nombre_ciudad FROM aerodromos, reservas WHERE aerodromos = vuelos.aerodromo_salida_id AND vuelos.estado='aceptado';" 
+	$result2 = $db -> prepare($query2);
 	$result2 -> execute();
 	$dataCollected = $result2 -> fetchAll();
   ?>
