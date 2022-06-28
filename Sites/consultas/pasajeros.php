@@ -25,7 +25,7 @@
 	echo "Pasajero: $pas, numero de pasaporte: $numeros[0]"
 
 	$ciudades = "SELECT nombre_ciudad FROM aerodromos, reservas WHERE aerodromos = vuelos.aerodromo_salida_id AND vuelos.estado='aceptado';";
-	$result2 = $db -> prepare($ciudades)
+	$result2 = $db -> prepare($ciudades);
 	$result2 -> execute();
 	$dataCollected = $result2 -> fetchAll();
   ?>
