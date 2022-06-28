@@ -24,17 +24,17 @@
 	$numeros = $result1 -> fetchAll();
 	echo "Pasajero: $pas, numero de pasaporte: $numeros[0]";
 
-	$ciudadesa = "SELECT DISTINCT ae.nombre_ciudad FROM aerodromos ae INNER JOIN vuelos vu ON ae.aerodromo_id=vu.aerodromo_salida_id WHERE vu.estado LIKE 'aceptado' ORDER BY DESC;";
+	$ciudadesa = "SELECT DISTINCT ae.nombre_ciudad FROM aerodromos ae INNER JOIN vuelos vu ON ae.aerodromo_id=vu.aerodromo_salida_id WHERE vu.estado LIKE 'aceptado' ORDER BY ae.nombre_ciudad DESC;";
 	$result2 = $db -> prepare($ciudadesa);
 	$result2 -> execute();
 	$dataCollected = $result2 -> fetchAll();
 
-	$ciudades = "SELECT DISTINCT ae.nombre_ciudad FROM aerodromos ae INNER JOIN vuelos vu ON ae.aerodromo_id=vu.aerodromo_llegada_id WHERE vu.estado LIKE 'aceptado' ORDER BY DESC;";
+	$ciudades = "SELECT DISTINCT ae.nombre_ciudad FROM aerodromos ae INNER JOIN vuelos vu ON ae.aerodromo_id=vu.aerodromo_llegada_id WHERE vu.estado LIKE 'aceptado' ORDER BY ae.nombre_ciudad DESC;";
 	$result3 = $db -> prepare($ciudades);
 	$result3 -> execute();
 	$dataCollected1 = $result3 -> fetchAll();
 
-	$fechas = "SELECT DISTINCT fecha_salida FROM vuelos WHERE estado LIKE 'aceptado' ORDER BY DESC;";
+	$fechas = "SELECT DISTINCT fecha_salida FROM vuelos WHERE estado LIKE 'aceptado' ORDER BY fecha_salida DESC;";
 	$result4 = $db -> prepare($fechas);
 	$result4 -> execute();
 	$dataCollected2 = $result4 -> fetchAll();
