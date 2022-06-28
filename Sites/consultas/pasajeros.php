@@ -65,9 +65,9 @@
   ?>
 	</table>
 
-	<form align="center" action="<?php echo $PHP_SELF; ?>" method="post">
+	<form align="center" action="consultas/pasajeros2.php" method="post">
 	Ciudad de origen:
-	<select name="tipo">
+	<select name="origen">
 		<?php
 		#Para cada tipo agregamos el tag <option value=value_of_param> visible_value </option>
 		foreach ($dataCollected as $d) {
@@ -76,22 +76,23 @@
 		
 ?>
 </select>
-	
-	Fecha de despegue:
-		<select name="tipo3">
-		<?php
-		#Para cada tipo agregamos el tag <option value=value_of_param> visible_value </option>
-		foreach ($dataCollected2 as $d2) {
-		echo "<option value=$d2[0]>$d2[0]</option>";
-		}
-?>
-</select>
+
 	Ciudad de destino:
-	<select name="tipo2">
+	<select name="destino">
 		<?php
 		#Para cada tipo agregamos el tag <option value=value_of_param> visible_value </option>
 		foreach ($dataCollected1 as $d1) {
 		echo "<option value=$d1[0]>$d1[0]</option>";
+		}
+?>
+</select>
+
+	Fecha de despegue:
+		<select name="fecha3">
+		<?php
+		#Para cada tipo agregamos el tag <option value=value_of_param> visible_value </option>
+		foreach ($dataCollected2 as $d2) {
+		echo "<option value=$d2[0]>$d2[0]</option>";
 		}
 ?>
 </select>
