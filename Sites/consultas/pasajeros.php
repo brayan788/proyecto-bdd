@@ -82,7 +82,6 @@
 		echo "<option value=$d1[0]>$d1[0]</option>";
 		}
 ?>
-?>
 	Fecha de despegue:
 		<select name="tipo3">
 		<?php
