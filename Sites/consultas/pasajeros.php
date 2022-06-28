@@ -73,7 +73,9 @@
 		foreach ($dataCollected as $d) {
 		echo "<option value=$d[0]>$d[0]</option>";
 		}
+		
 ?>
+</select>
 	
 	Fecha de despegue:
 		<select name="tipo3">
@@ -83,6 +85,7 @@
 		echo "<option value=$d2[0]>$d2[0]</option>";
 		}
 ?>
+</select>
 	Ciudad de destino:
 	<select name="tipo2">
 		<?php
@@ -91,6 +94,7 @@
 		echo "<option value=$d1[0]>$d1[0]</option>";
 		}
 ?>
+</select>
 	<input type="submit" value="Buscar por tipo">
 	</form>
 
