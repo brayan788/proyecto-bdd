@@ -20,8 +20,8 @@
             re.nombre_comprador, re.nacionalidad_comprador, re.fecha_nacimiento_comprador, re.numero_asiento,
             re.clase, re.comida_y_maleta, re.pasaporte_pasajero, re.nombre_pasajero, re.nacionalidad_pasajero,
             re.fecha_nacimiento_pasajero
-            FROM reservas re 
-            INNER JOIN vuelos vu ON vu.vuelo_id=re.vuelo_id 
+            FROM vuelos vu 
+            INNER JOIN reservas re ON vu.vuelo_id=re.vuelo_id 
             INNER JOIN aerodromos ae ON ae.aerodromo_id=vu.aerodromo_salida_id
             INNER JOIN aerodromos ae2 ON ae2.aerodromo_id=vu.aerodromo_llegada_id
             WHERE re.nombre_pasajero LIKE '$pas%' AND vu.fecha_salida>='$fecha' AND ae.nombre_ciudad='$origen' AND ae.nombre_ciudad='$destino';";
