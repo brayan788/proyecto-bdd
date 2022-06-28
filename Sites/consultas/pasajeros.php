@@ -22,7 +22,7 @@
 	$result1 = $db -> prepare($num);
 	$result1 -> execute();
 	$numeros = $result1 -> fetchAll();
-	echo "Pasajero: $pas, numero de pasaporte: $numeros[0]"
+	echo "Pasajero: $pas, numero de pasaporte: $numeros[0]";
 
 	$ciudadesa = "SELECT ae.nombre_ciudad FROM aerodromos ae INNER JOIN vuelos  vu ON ae.aerodromo_id=vu.aerodromo_salida_id WHERE vu.estado='aceptado';";
 	$result2 = $db -> prepare($ciudadesa);
