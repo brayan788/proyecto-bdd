@@ -24,7 +24,7 @@
 	$numeros = $result1 -> fetchAll();
 	echo "Pasajero: $pas, numero de pasaporte: $numeros[0]";
 
-	$ciudadesa = "SELECT ae.nombre_ciudad FROM aerodromos ae INNER JOIN vuelos vu ON ae.aerodromo_id=vu.aerodromo_salida_id WHERE vu.estado LIKE 'pendiente';";
+	$ciudadesa = "SELECT ae.nombre_ciudad FROM aerodromos ae INNER JOIN vuelos vu ON ae.aerodromo_id=vu.aerodromo_salida_id WHERE vu.estado LIKE 'aceptado';";
 	$result2 = $db -> prepare($ciudadesa);
 	$result2 -> execute();
 	$dataCollected = $result2 -> fetchAll();
