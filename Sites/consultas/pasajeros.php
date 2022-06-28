@@ -28,6 +28,16 @@
 	$result2 = $db -> prepare($ciudadesa);
 	$result2 -> execute();
 	$dataCollected = $result2 -> fetchAll();
+
+	$ciudades = "SELECT ae.nombre_ciudad FROM aerodromos ae INNER JOIN vuelos vu ON ae.aerodromo_id=vu.aerodromo_llegada_id WHERE vu.estado LIKE 'aceptado';";
+	$result3 = $db -> prepare($ciudades);
+	$result3 -> execute();
+	$dataCollected1 = $result3 -> fetchAll();
+
+	$fechas = "SELECT fecha_salidas FROM vuelos WHERE vu.estado LIKE 'aceptado';";
+	$result4 = $db -> prepare($ciudades);
+	$result4 -> execute();
+	$dataCollected3 = $result4 -> fetchAll();
   ?>
 
 	<table>
@@ -62,6 +72,20 @@
 		#Para cada tipo agregamos el tag <option value=value_of_param> visible_value </option>
 		foreach ($dataCollected as $d) {
 		echo "<option value=$d[0]>$d[0]</option>";
+		}
+?>
+		<select name="tipo">
+		<?php
+		#Para cada tipo agregamos el tag <option value=value_of_param> visible_value </option>
+		foreach ($dataCollected1 as $d1) {
+		echo "<option value=$d1[0]>$d1[0]</option>";
+		}
+?>
+		<select name="tipo">
+		<?php
+		#Para cada tipo agregamos el tag <option value=value_of_param> visible_value </option>
+		foreach ($dataCollected2 as $d2) {
+		echo "<option value=$d2[0]>$d2[0]</option>";
 		}
 ?>
 	    <input type="submit" value="Buscar por tipo">
