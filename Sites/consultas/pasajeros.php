@@ -14,7 +14,7 @@
 
 	$pas = $_SESSION['username'];
 	$num = "SELECT pasaporte_pasajero FROM reservas WHERE nombre_pasajero LIKE '$pas%';";
-	$query = "SELECT vuelo_id FROM reservas WHERE nombre_pasajero LIKE '$pas%';";
+	$query = "SELECT * FROM reservas WHERE nombre_pasajero LIKE '$pas%';";
 	$result = $db -> prepare($query);
 	$result -> execute();
 	$reservas = $result -> fetchAll();
@@ -32,20 +32,25 @@
 
 	<table>
     <tr>
-	<th>Reserva id</th>
+	  <th>Reserva id</th>
       <th>Codigo reserva</th>
       <th>Número ticket</th>
 	  <th>Vuelo id</th>
 	  <th>Pasaporte comprador</th>
 	  <th>Nombre comprador</th>
 	  <th>Nacionalidad comprador</th>
+	  <th>Fecha nacimiento comprador</th>
 	  <th>Numero de asiento</th>
 	  <th>Clase</th>
 	  <th>Comida y maleta</th>
+	  <th>Pasaporte pasajero</th>
+	  <th>Nombre pasajero</th>
+	  <th>Nacionalidad pasajero</th>
+	  <th>Fecha nacimiento pasajero</th>
     </tr>
   <?php
 	foreach ($reservas as $reserva) {
-		echo "<tr> <td>$reserva[0]</td> <td>$reserva[1]</td> <td>$reserva[2]</td> <td>$reserva[3]</td> <td>$reserva[4]</td> <td>$reserva[5]</td> <td>$reserva[6]</td> <td>$reserva[7]</td> <td>$reserva[8]</td> <td>$reserva[9]</td> </tr>";
+		echo "<tr> <td>$reserva[0]</td> <td>$reserva[1]</td> <td>$reserva[2]</td> <td>$reserva[3]</td> <td>$reserva[4]</td> <td>$reserva[5]</td> <td>$reserva[6]</td> <td>$reserva[7]</td> <td>$reserva[8]</td> <td>$reserva[9]</td> <td>$reserva[10]</td> <td>$reserva[11]</td> <td>$reserva[12]</td> <td>$reserva[13]</td> <td>$reserva[14]</td></tr>";
 	}
   ?>
 	</table>
