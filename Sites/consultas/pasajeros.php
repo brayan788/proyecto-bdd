@@ -64,5 +64,7 @@
 		echo "<option value=$d[0]>$d[0]</option>";
 		}
 ?>
+	    <input type="submit" value="Buscar por tipo">
+	</form>
 
 <?php include('../templates/footer.html'); ?>
