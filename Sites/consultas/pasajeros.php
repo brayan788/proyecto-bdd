@@ -10,7 +10,7 @@
 
 <?php
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
-  require("../config/conexion_82.php");
+  require("../config/conexion_91.php");
 
 	$pas = $_SESSION['username'];
 	$num = "SELECT pasaporte_pasajero FROM reservas WHERE nombre_pasajero LIKE '$pas%';";
