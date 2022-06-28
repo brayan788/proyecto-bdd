@@ -12,11 +12,11 @@
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
   require("../config/conexion_91.php");
 
-  $pas = $_SESSION['username'];
-  $origen = $_POST["origen"];
-  $destino = $_POST["destino"];
-  $fecha = $_POST["fecha3"];
-  $query = "SELECT re.reserva_id, re.codigo_reserva, re.numero_ticket, re.vuelo_id, re.pasaporte_comprador, 
+    $pas = $_SESSION['username'];
+    $origen = $_POST["origen"];
+    $destino = $_POST["destino"];
+    $fecha = $_POST["fecha3"];
+    $query = "SELECT re.reserva_id, re.codigo_reserva, re.numero_ticket, re.vuelo_id, re.pasaporte_comprador, 
             re.nombre_comprador, re.nacionalidad_comprador, re.fecha_nacimiento_comprador, re.numero_asiento,
             re.clase, re.comida_y_maleta, re.pasaporte_pasajero, re.nombre_pasajero, re.nacionalidad_pasajero,
             re.fecha_nacimiento_pasajero
