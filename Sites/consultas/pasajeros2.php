@@ -21,7 +21,7 @@
             JOIN reservas re ON vu.vuelo_id=re.vuelo_id
             JOIN aerodromos ae ON ae.aerodromo_id=vu.aerodromo_salida_id
             JOIN aerodromos ae2 ON ae2.aerodromo_id=vu.aerodromo_llegada_id
-            WHERE fecha_salida>='$fecha' AND ae.nombre_ciudad='$origen';";
+            WHERE fecha_salida>='$fecha' AND ae.nombre_ciudad='$origen' AND ae2.nombre_ciudad='$destino';";
   $result = $db -> prepare($query);
   $result -> execute();
   $reservas = $result -> fetchAll();
