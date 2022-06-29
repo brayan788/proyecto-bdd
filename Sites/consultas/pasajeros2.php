@@ -20,7 +20,7 @@
             FROM reservas re
             INNER JOIN vuelos vu ON vu.vuelo_id=re.vuelo_id 
             INNER JOIN aerodromos ae ON ae.aerodromo_id=vu.aerodromo_salida_id 
-            WHERE vu.estado='pendiente' AND vu.fecha_salida>='$fecha' AND ae.nombre_ciudad='$origen';";
+            WHERE vu.fecha_salida>='$fecha' AND ae.nombre_ciudad='$origen';";
   $result = $db -> prepare($query);
   $result -> execute();
   $reservas = $result -> fetchAll();
