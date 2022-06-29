@@ -70,7 +70,7 @@
 	<select name="origen">
 		<?php
 		#Para cada tipo agregamos el tag <option value=value_of_param> visible_value </option>
-		foreach ($dataCollected as $d) {
+		foreach ($dataCollected1 as $d) {
 		echo "<option value=$d[0]>$d[0]</option>";
 		}
 		
@@ -81,7 +81,7 @@
 	<select name="destino">
 		<?php
 		#Para cada tipo agregamos el tag <option value=value_of_param> visible_value </option>
-		foreach ($dataCollected1 as $d1) {
+		foreach ($dataCollected as $d1) {
 		echo "<option value=$d1[0]>$d1[0]</option>";
 		}
 ?>
